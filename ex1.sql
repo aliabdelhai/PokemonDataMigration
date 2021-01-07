@@ -1,48 +1,50 @@
 
 use sql_intro;
 
-CREATE TABLE pokemon_type(
-    id INT NOT NULL AUTO_INCREMENT PRIMARY KEY,
-    name VARCHAR(20),
-    type VARCHAR(20)
+-- CREATE TABLE pokemon_type(
+--     id INT NOT NULL AUTO_INCREMENT PRIMARY KEY,
+--     type VARCHAR(25)
 
-);
+-- );
 
 -- DROP TABLE pokemon_type
 
 
-CREATE TABLE trainer(
-    id INT NOT NULL AUTO_INCREMENT PRIMARY KEY,
-    name VARCHAR(20),
-    town VARCHAR(20)
-);
+-- CREATE TABLE trainer(
+--     id INT NOT NULL AUTO_INCREMENT PRIMARY KEY,
+--     name VARCHAR(20),
+--     town INT,
+--     FOREIGN KEY(town) REFERENCES town(id)
+-- );
 
 -- DROP TABLE trainer
 
 
-CREATE TABLE town(
-    id INT NOT NULL AUTO_INCREMENT PRIMARY KEY,
-    name VARCHAR(20)
-);
+-- CREATE TABLE town(
+--     id INT NOT NULL AUTO_INCREMENT PRIMARY KEY,
+--     town VARCHAR(20)
+-- );
 
 -- DROP TABLE town;
 
-CREATE TABLE pokemon( 
-    id INT NOT NULL PRIMARY KEY,
-    name VARCHAR(20),
-    type VARCHAR(20),
-    height SMALLINT,
-    weight SMALLINT
-);
+-- CREATE TABLE pokemon( 
+--     id INT PRIMARY KEY,
+--     name VARCHAR(20),
+--     type INT,
+--     height SMALLINT,
+--     weight SMALLINT,
+--     FOREIGN KEY(type) REFERENCES pokemon_type(id)
+
+-- );
 
 -- DROP TABLE pokemon;
 
-CREATE TABLE pokemon_trainer(
-    pokemon_id INT,
-    trainer_id INT,
-    FOREIGN KEY(pokemon_id) REFERENCES pokemon(id),
-    FOREIGN KEY(trainer_id) REFERENCES trainer(id)
-);
+-- CREATE TABLE pokemon_trainer(
+--     pokemon_id INT,
+--     trainer_id INT,
+--     FOREIGN KEY(pokemon_id) REFERENCES pokemon(id),
+--     FOREIGN KEY(trainer_id) REFERENCES trainer(id)
+-- );
 
 -- DROP TABLE pokemon_trainer;
 
@@ -74,3 +76,4 @@ CREATE TABLE pokemon_trainer(
 -- GROUP BY pokemon_trainer.pokemon_id
 
 
+-- SELECT * FROM trainer;
